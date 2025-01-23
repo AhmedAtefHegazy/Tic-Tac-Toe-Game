@@ -263,7 +263,7 @@
             this.Controls.Add(this.PB1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Tic Tac Toe Game";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB2)).EndInit();
