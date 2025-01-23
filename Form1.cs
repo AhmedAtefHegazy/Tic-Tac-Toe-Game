@@ -20,13 +20,13 @@ namespace Tic_Tac_Toe_Game
             if (Player == enPlayer.P1)
             {
                 Player = enPlayer.P2;
-                lblPlayer.Text = "Player 2";
+                lblTurn.Text = "Player 2";
             }
 
             else if (Player == enPlayer.P2)
             {
                 Player = enPlayer.P1;
-                lblPlayer.Text = "Player 1";
+                lblTurn.Text = "Player 1";
             }
 
             if (PB1.Enabled == false && PB8.Enabled == false && PB2.Enabled == false
@@ -34,7 +34,7 @@ namespace Tic_Tac_Toe_Game
                 && PB5.Enabled == false && PB6.Enabled == false &&
                 PB3.Enabled == false && PB7.Enabled == false)
             {
-                lblPlayer.Text = "Game Over";
+                lblTurn.Text = "Game Over";
 
             }
 
@@ -58,7 +58,7 @@ namespace Tic_Tac_Toe_Game
             {
                 lblWinner.Text = "Player 1";
                 MessageBox.Show("Game Over", "Game Over");
-                lblPlayer.Text = "Game Over";
+                lblTurn.Text = "Game Over";
                 PB1.Enabled = false;
                 PB2.Enabled = false;
                 PB3.Enabled = false;
@@ -84,7 +84,7 @@ namespace Tic_Tac_Toe_Game
             {
                 lblWinner.Text = "Player 2";
                 MessageBox.Show("Game Over", "Game Over");
-                lblPlayer.Text = "Game Over";
+                lblTurn.Text = "Game Over";
                 PB1.Enabled = false;
                 PB2.Enabled = false;
                 PB3.Enabled = false;
@@ -98,7 +98,7 @@ namespace Tic_Tac_Toe_Game
 
 
 
-            else if (lblPlayer.Text == "Game Over")
+            else if (lblTurn.Text == "Game Over")
             {
                 lblWinner.Text = "Draw";
                 lblWinner.ForeColor = Color.Red;
@@ -106,186 +106,29 @@ namespace Tic_Tac_Toe_Game
             }
         }
 
-        void UpdateImageAndTags(byte NumberOfImage)
+        void UpdateImageAndTags(PictureBox pictureBox)
         {
 
-
-            switch (NumberOfImage)
+            if (Player == enPlayer.P1)
             {
-                case 1:
+                pictureBox.Image = Resources.X;
+                pictureBox.Tag = "X";
+                pictureBox.Enabled = false;
 
+            }
 
-                    if (Player == enPlayer.P1)
-                    {
-                        PB1.Image = Resources.X;
-                        PB1.Tag = "X";
-                        PB1.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB1.Image = Resources.O;
-                        PB1.Tag = "O";
-                        PB1.Enabled = false;
-                    }
-
-                    break;
-
-                case 2:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB2.Image = Resources.X;
-                        PB2.Tag = "X";
-                        PB2.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB2.Image = Resources.O;
-                        PB2.Tag = "O";
-                        PB2.Enabled = false;
-                    }
-
-                    break;
-                case 3:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB3.Image = Resources.X;
-                        PB3.Tag = "X";
-                        PB3.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB3.Image = Resources.O;
-                        PB3.Tag = "O";
-                        PB3.Enabled = false;
-                    }
-
-                    break;
-                case 4:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB4.Image = Resources.X;
-                        PB4.Tag = "X";
-                        PB4.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB4.Image = Resources.O;
-                        PB4.Tag = "O";
-                        PB4.Enabled = false;
-                    }
-
-                    break;
-                case 5:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB5.Image = Resources.X;
-                        PB5.Tag = "X";
-                        PB5.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB5.Image = Resources.O;
-                        PB5.Tag = "O";
-                        PB5.Enabled = false;
-                    }
-
-                    break;
-                case 6:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB6.Image = Resources.X;
-                        PB6.Tag = "X";
-                        PB6.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB6.Image = Resources.O;
-                        PB6.Tag = "O";
-                        PB6.Enabled = false;
-                    }
-
-                    break;
-                case 7:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB7.Image = Resources.X;
-                        PB7.Tag = "X";
-                        PB7.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB7.Image = Resources.O;
-                        PB7.Tag = "O";
-                        PB7.Enabled = false;
-                    }
-
-                    break;
-                case 8:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB8.Image = Resources.X;
-                        PB8.Tag = "X";
-                        PB8.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB8.Image = Resources.O;
-                        PB8.Tag = "O";
-                        PB8.Enabled = false;
-                    }
-
-                    break;
-                case 9:
-
-                    if (Player == enPlayer.P1)
-                    {
-                        PB9.Image = Resources.X;
-                        PB9.Tag = "X";
-                        PB9.Enabled = false;
-
-                    }
-
-                    else if (Player == enPlayer.P2)
-                    {
-                        PB9.Image = Resources.O;
-                        PB9.Tag = "O";
-                        PB9.Enabled = false;
-                    }
-
-                    break;
-
-                default:
-                    break;
+            else if (Player == enPlayer.P2)
+            {
+                pictureBox.Image = Resources.O;
+                pictureBox.Tag = "O";
+                pictureBox.Enabled = false;
             }
 
         }
 
         void ResetGame()
         {
-            lblPlayer.Text = "Player 1";
+            lblTurn.Text = "Player 1";
             lblWinner.Text = "In Progress";
             lblWinner.ForeColor = Color.Lime;
 
@@ -340,81 +183,16 @@ namespace Tic_Tac_Toe_Game
             e.Graphics.DrawLine(pen, 652, 100, 652, 415);
         }
 
-        private void pictureBox1_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(1);
-            Player = UpdateNextPlayer(Player);
-
-        }
-
-        private void pictureBox3_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(2);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox8_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(3);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox5_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(4);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox6_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(5);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox7_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(6);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox9_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(7);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox2_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(8);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
-        private void pictureBox4_Click(object sender, System.EventArgs e)
-        {
-
-            UpdateImageAndTags(9);
-
-            Player = UpdateNextPlayer(Player);
-        }
-
         private void btnRestart_Click(object sender, System.EventArgs e)
         {
             ResetGame();
+        }
+
+        private void pictureBox_Click(object sender, System.EventArgs e)
+        {
+            UpdateImageAndTags((PictureBox)sender);
+
+            Player = UpdateNextPlayer(Player);
         }
     }
 }

@@ -39,7 +39,7 @@
             this.PB7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblPlayer = new System.Windows.Forms.Label();
+            this.lblTurn = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblWinner = new System.Windows.Forms.Label();
             this.btnRestart = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.PB1.TabIndex = 0;
             this.PB1.TabStop = false;
             this.PB1.Tag = "1";
-            this.PB1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PB1.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB2
             // 
@@ -78,7 +78,7 @@
             this.PB2.TabIndex = 2;
             this.PB2.TabStop = false;
             this.PB2.Tag = "2";
-            this.PB2.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PB2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB8
             // 
@@ -91,7 +91,7 @@
             this.PB8.TabIndex = 3;
             this.PB8.TabStop = false;
             this.PB8.Tag = "8";
-            this.PB8.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PB8.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB9
             // 
@@ -104,7 +104,7 @@
             this.PB9.TabIndex = 4;
             this.PB9.TabStop = false;
             this.PB9.Tag = "9";
-            this.PB9.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.PB9.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB4
             // 
@@ -117,7 +117,7 @@
             this.PB4.TabIndex = 5;
             this.PB4.TabStop = false;
             this.PB4.Tag = "4";
-            this.PB4.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.PB4.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB5
             // 
@@ -130,7 +130,7 @@
             this.PB5.TabIndex = 6;
             this.PB5.TabStop = false;
             this.PB5.Tag = "5";
-            this.PB5.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.PB5.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB6
             // 
@@ -143,7 +143,7 @@
             this.PB6.TabIndex = 7;
             this.PB6.TabStop = false;
             this.PB6.Tag = "6";
-            this.PB6.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.PB6.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB3
             // 
@@ -156,7 +156,7 @@
             this.PB3.TabIndex = 8;
             this.PB3.TabStop = false;
             this.PB3.Tag = "3";
-            this.PB3.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.PB3.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // PB7
             // 
@@ -169,7 +169,7 @@
             this.PB7.TabIndex = 9;
             this.PB7.TabStop = false;
             this.PB7.Tag = "7";
-            this.PB7.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.PB7.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // label1
             // 
@@ -193,16 +193,16 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Turn";
             // 
-            // lblPlayer
+            // lblTurn
             // 
-            this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblPlayer.Location = new System.Drawing.Point(60, 172);
-            this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(160, 48);
-            this.lblPlayer.TabIndex = 12;
-            this.lblPlayer.Text = "Player 1";
+            this.lblTurn.AutoSize = true;
+            this.lblTurn.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTurn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTurn.Location = new System.Drawing.Point(60, 172);
+            this.lblTurn.Name = "lblTurn";
+            this.lblTurn.Size = new System.Drawing.Size(160, 48);
+            this.lblTurn.TabIndex = 12;
+            this.lblTurn.Text = "Player 1";
             // 
             // label4
             // 
@@ -249,7 +249,7 @@
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblWinner);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblPlayer);
+            this.Controls.Add(this.lblTurn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB7);
@@ -264,6 +264,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe Game";
+            this.Click += new System.EventHandler(this.pictureBox_Click);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB2)).EndInit();
@@ -292,7 +293,7 @@
         private System.Windows.Forms.PictureBox PB7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblPlayer;
+        private System.Windows.Forms.Label lblTurn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblWinner;
         private System.Windows.Forms.Button btnRestart;
