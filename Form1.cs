@@ -57,7 +57,7 @@ namespace Tic_Tac_Toe_Game
                 )
             {
                 lblWinner.Text = "Player 1";
-                MessageBox.Show((lblWinner.Text + " is the Winner"), "Game Over");
+                MessageBox.Show("Game Over", "Game Over");
                 lblPlayer.Text = "Game Over";
                 PB1.Enabled = false;
                 PB2.Enabled = false;
@@ -83,7 +83,7 @@ namespace Tic_Tac_Toe_Game
                        )
             {
                 lblWinner.Text = "Player 2";
-                MessageBox.Show((lblWinner.Text + " is the Winner"), "Game Over");
+                MessageBox.Show("Game Over", "Game Over");
                 lblPlayer.Text = "Game Over";
                 PB1.Enabled = false;
                 PB2.Enabled = false;
@@ -102,14 +102,18 @@ namespace Tic_Tac_Toe_Game
             {
                 lblWinner.Text = "Draw";
                 lblWinner.ForeColor = Color.Red;
+                MessageBox.Show("Game Over", "Game Over");
             }
         }
 
         void UpdateImageAndTags(byte NumberOfImage)
         {
+
+
             switch (NumberOfImage)
             {
                 case 1:
+
 
                     if (Player == enPlayer.P1)
                     {
@@ -323,7 +327,7 @@ namespace Tic_Tac_Toe_Game
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color color = Color.Goldenrod;
+            Color color = Color.White;
 
             Pen pen = new Pen(color, 10);
 
@@ -338,6 +342,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox1_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(1);
             Player = UpdateNextPlayer(Player);
 
@@ -345,6 +350,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox3_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(2);
 
             Player = UpdateNextPlayer(Player);
@@ -352,6 +358,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox8_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(3);
 
             Player = UpdateNextPlayer(Player);
@@ -359,6 +366,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox5_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(4);
 
             Player = UpdateNextPlayer(Player);
@@ -366,6 +374,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox6_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(5);
 
             Player = UpdateNextPlayer(Player);
@@ -373,6 +382,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox7_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(6);
 
             Player = UpdateNextPlayer(Player);
@@ -380,6 +390,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox9_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(7);
 
             Player = UpdateNextPlayer(Player);
@@ -387,6 +398,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox2_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(8);
 
             Player = UpdateNextPlayer(Player);
@@ -394,6 +406,7 @@ namespace Tic_Tac_Toe_Game
 
         private void pictureBox4_Click(object sender, System.EventArgs e)
         {
+
             UpdateImageAndTags(9);
 
             Player = UpdateNextPlayer(Player);

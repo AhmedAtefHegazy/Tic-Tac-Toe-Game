@@ -187,7 +187,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(137, 60);
+            this.label2.Location = new System.Drawing.Point(60, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 48);
             this.label2.TabIndex = 11;
@@ -198,7 +198,7 @@
             this.lblPlayer.AutoSize = true;
             this.lblPlayer.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblPlayer.Location = new System.Drawing.Point(107, 115);
+            this.lblPlayer.Location = new System.Drawing.Point(60, 172);
             this.lblPlayer.Name = "lblPlayer";
             this.lblPlayer.Size = new System.Drawing.Size(160, 48);
             this.lblPlayer.TabIndex = 12;
@@ -209,7 +209,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(114, 170);
+            this.label4.Location = new System.Drawing.Point(60, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 48);
             this.label4.TabIndex = 13;
@@ -220,7 +220,7 @@
             this.lblWinner.AutoSize = true;
             this.lblWinner.Font = new System.Drawing.Font("Microsoft Tai Le", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinner.ForeColor = System.Drawing.Color.Lime;
-            this.lblWinner.Location = new System.Drawing.Point(80, 225);
+            this.lblWinner.Location = new System.Drawing.Point(60, 282);
             this.lblWinner.Name = "lblWinner";
             this.lblWinner.Size = new System.Drawing.Size(215, 48);
             this.lblWinner.TabIndex = 14;
@@ -232,7 +232,7 @@
             this.btnRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestart.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestart.ForeColor = System.Drawing.Color.Gold;
-            this.btnRestart.Location = new System.Drawing.Point(85, 280);
+            this.btnRestart.Location = new System.Drawing.Point(68, 351);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(205, 51);
             this.btnRestart.TabIndex = 15;
