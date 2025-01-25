@@ -177,10 +177,10 @@ namespace Tic_Tac_Toe_Game
             pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
             pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
 
-            e.Graphics.DrawLine(pen, 390, 205, 780, 205);
-            e.Graphics.DrawLine(pen, 390, 313, 780, 313);
-            e.Graphics.DrawLine(pen, 520, 100, 520, 415);
-            e.Graphics.DrawLine(pen, 652, 100, 652, 415);
+            e.Graphics.DrawLine(pen, 300, 212, 680, 212);
+            e.Graphics.DrawLine(pen, 300, 319, 680, 319);
+            e.Graphics.DrawLine(pen, 425, 110, 425, 420);
+            e.Graphics.DrawLine(pen, 555, 110, 555, 420);
         }
 
         private void btnRestart_Click(object sender, System.EventArgs e)
@@ -193,6 +193,12 @@ namespace Tic_Tac_Toe_Game
             UpdateImageAndTags((PictureBox)sender);
 
             Player = UpdateNextPlayer(Player);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://ahmedatefhegazy.github.io/portfolio");
         }
     }
 }
